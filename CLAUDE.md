@@ -1,0 +1,1 @@
+Building a social media content reviewing application. For social media managers to seamlessly get feedback on individual posts, edit, send for review. Takes out notion/WA/email back and forth. Also used for influencers and brands.

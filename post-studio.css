@@ -1,0 +1,176 @@
+/* =============================================================
+   POST STUDIO — Design System
+   Clean & athletic · crisp · confident · sporty but refined
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---------- Brand ---------- */
+  --ps-orange:      #FF5A2C;   /* hero action */
+  --ps-orange-700:  #E84718;   /* hover */
+  --ps-orange-100:  #FFEAE2;   /* tint */
+  --ps-yellow:      #FFD23F;   /* secondary energy */
+  --ps-yellow-100:  #FFF4D1;
+
+  /* ---------- Ink / neutral (warm-cool neutral) ---------- */
+  --ps-ink:         #15171A;   /* primary text / near-black */
+  --ps-ink-2:       #5B6068;   /* secondary text */
+  --ps-ink-3:       #8E939B;   /* tertiary / meta */
+  --ps-ink-4:       #B6BAC0;   /* faint */
+
+  --ps-bg:          #FFFFFF;
+  --ps-bg-soft:     #F6F6F3;   /* app canvas */
+  --ps-bg-softer:   #FBFBF9;
+  --ps-surface:     #FFFFFF;
+
+  --ps-line:        #E9E9E4;   /* hairline */
+  --ps-line-2:      #DEDED8;   /* stronger hairline */
+
+  /* ---------- Stage / status ---------- */
+  --ps-review:      #C77F12;   /* amber text */
+  --ps-review-bg:   #FDF2DA;
+  --ps-review-dot:  #F0A92B;
+
+  --ps-changes:     #C9443D;   /* rose text */
+  --ps-changes-bg:  #FCE9E7;
+  --ps-changes-dot: #E2564E;
+
+  --ps-approved:    #1B8C52;   /* green text */
+  --ps-approved-bg: #E3F4EA;
+  --ps-approved-dot:#26A862;
+
+  --ps-scheduled:   #3A5BD8;   /* blue text */
+  --ps-scheduled-bg:#E8EDFC;
+  --ps-scheduled-dot:#4C6FFF;
+
+  /* ---------- Radius ---------- */
+  --ps-r-xs: 6px;
+  --ps-r-sm: 10px;
+  --ps-r-md: 14px;
+  --ps-r-lg: 20px;
+  --ps-r-xl: 26px;
+  --ps-r-pill: 999px;
+
+  /* ---------- Shadows (soft, neutral-tinted) ---------- */
+  --ps-shadow-xs: 0 1px 2px rgba(21,23,26,0.05);
+  --ps-shadow-sm: 0 2px 6px rgba(21,23,26,0.06);
+  --ps-shadow-md: 0 8px 24px rgba(21,23,26,0.09);
+  --ps-shadow-lg: 0 22px 60px rgba(21,23,26,0.18);
+  --ps-shadow-card: 0 1px 2px rgba(21,23,26,0.04), 0 4px 14px rgba(21,23,26,0.05);
+
+  /* ---------- Spacing (8 base) ---------- */
+  --ps-1: 4px;  --ps-2: 8px;  --ps-3: 12px; --ps-4: 16px;
+  --ps-5: 24px; --ps-6: 32px; --ps-7: 48px; --ps-8: 64px;
+
+  /* ---------- Type ---------- */
+  --ps-font-display: 'Archivo', system-ui, sans-serif;
+  --ps-font-ui:      'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --ps-font-mono:    'DM Mono', ui-monospace, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ps-font-ui);
+  color: var(--ps-ink);
+  background: var(--ps-bg-soft);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Type utilities ---------- */
+.ps-display {
+  font-family: var(--ps-font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  color: var(--ps-ink);
+}
+.ps-h1 { font-family: var(--ps-font-display); font-weight: 800; font-size: 30px; line-height: 1.08; letter-spacing: -0.025em; }
+.ps-h2 { font-family: var(--ps-font-display); font-weight: 700; font-size: 22px; line-height: 1.15; letter-spacing: -0.02em; }
+.ps-h3 { font-family: var(--ps-font-display); font-weight: 700; font-size: 17px; line-height: 1.2; letter-spacing: -0.015em; }
+.ps-eyebrow {
+  font-family: var(--ps-font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ps-ink-3);
+}
+.ps-mono { font-family: var(--ps-font-mono); letter-spacing: -0.01em; }
+.ps-body { font-size: 15px; line-height: 1.5; color: var(--ps-ink-2); }
+.ps-meta { font-size: 13px; line-height: 1.4; color: var(--ps-ink-3); }
+
+/* ---------- Buttons ---------- */
+.ps-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--ps-font-ui); font-weight: 600; font-size: 14px;
+  padding: 10px 18px; border-radius: var(--ps-r-sm);
+  border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+  transition: background-color .16s ease, color .16s ease, border-color .16s ease, transform .08s ease, box-shadow .16s ease;
+  letter-spacing: -0.01em;
+}
+.ps-btn:active { transform: translateY(0.5px) scale(0.99); }
+.ps-btn-primary { background: var(--ps-orange); color: #fff; box-shadow: 0 1px 2px rgba(232,71,24,0.25); }
+.ps-btn-primary:hover { background: var(--ps-orange-700); }
+.ps-btn-dark { background: var(--ps-ink); color: #fff; }
+.ps-btn-dark:hover { background: #000; }
+.ps-btn-outline { background: var(--ps-bg); color: var(--ps-ink); border-color: var(--ps-line-2); }
+.ps-btn-outline:hover { background: var(--ps-bg-soft); border-color: var(--ps-ink-4); }
+.ps-btn-ghost { background: transparent; color: var(--ps-ink-2); }
+.ps-btn-ghost:hover { background: rgba(21,23,26,0.05); color: var(--ps-ink); }
+.ps-btn-sm { padding: 7px 12px; font-size: 13px; border-radius: var(--ps-r-xs); }
+.ps-btn-lg { padding: 14px 24px; font-size: 16px; border-radius: var(--ps-r-md); }
+.ps-btn-icon { padding: 0; width: 38px; height: 38px; border-radius: var(--ps-r-sm); }
+
+/* ---------- Inputs ---------- */
+.ps-input, .ps-textarea {
+  width: 100%; font-family: var(--ps-font-ui); font-size: 14px; color: var(--ps-ink);
+  padding: 11px 14px; border-radius: var(--ps-r-sm);
+  border: 1px solid var(--ps-line-2); background: var(--ps-bg);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.ps-input::placeholder, .ps-textarea::placeholder { color: var(--ps-ink-4); }
+.ps-input:focus, .ps-textarea:focus {
+  outline: none; border-color: var(--ps-orange);
+  box-shadow: 0 0 0 3px rgba(255,90,44,0.16);
+}
+.ps-textarea { resize: none; line-height: 1.5; }
+
+/* ---------- Pills / chips ---------- */
+.ps-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; letter-spacing: -0.01em;
+  padding: 7px 13px; border-radius: var(--ps-r-pill);
+  border: 1px solid var(--ps-line-2); background: var(--ps-bg);
+  color: var(--ps-ink-2); cursor: pointer; white-space: nowrap;
+  transition: all .15s ease;
+}
+.ps-chip:hover { border-color: var(--ps-ink-4); color: var(--ps-ink); }
+.ps-chip[data-active="true"] { background: var(--ps-ink); border-color: var(--ps-ink); color: #fff; }
+
+/* ---------- Status badge ---------- */
+.ps-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: -0.005em;
+  padding: 4px 10px 4px 8px; border-radius: var(--ps-r-pill);
+}
+.ps-status .dot { width: 7px; height: 7px; border-radius: 50%; }
+
+/* ---------- Scrollbar ---------- */
+.ps-scroll::-webkit-scrollbar { height: 10px; width: 10px; }
+.ps-scroll::-webkit-scrollbar-thumb { background: var(--ps-line-2); border-radius: 999px; border: 3px solid transparent; background-clip: padding-box; }
+.ps-scroll::-webkit-scrollbar-thumb:hover { background: var(--ps-ink-4); background-clip: padding-box; border: 3px solid transparent; }
+.ps-scroll::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- Motion ---------- */
+@keyframes ps-fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes ps-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ps-pop { 0% { transform: scale(.9); opacity: 0; } 60% { transform: scale(1.03); } 100% { transform: scale(1); opacity: 1; } }
+@keyframes ps-slide-in { from { transform: translateX(100%); } to { transform: none; } }
+
+.ps-anim-up { animation: ps-fade-up .32s cubic-bezier(.4,0,.2,1) both; }
